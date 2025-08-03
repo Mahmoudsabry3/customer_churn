@@ -2,6 +2,98 @@
 
 A comprehensive machine learning platform for predicting customer churn in subscription-based e-commerce services, built with FastAPI, XGBoost, and MLflow.
 
+## 🚀 Recent Updates (Latest Version)
+
+### What's New in This Version
+- **Enhanced Model Performance**: Improved XGBoost model achieving 91.10% ROC AUC with optimized hyperparameters
+- **Production-Ready API**: FastAPI implementation with comprehensive error handling and CORS support
+- **MLflow Integration**: Complete experiment tracking and model versioning system
+- **Automated Retraining Framework**: Conceptual system for handling data drift and model degradation
+- **Interactive Web Interface**: User-friendly frontend for real-time testing and monitoring
+- **Comprehensive Documentation**: Detailed API documentation and usage examples
+- **GitHub Repository**: Clean, organized codebase with proper version control
+
+### Key Improvements
+- ✅ **Model Accuracy**: Achieved 91.10% ROC AUC with robust cross-validation
+- ✅ **API Performance**: Sub-second response times for both single and batch predictions
+- ✅ **Code Quality**: Comprehensive error handling and input validation
+- ✅ **Documentation**: Detailed README with installation and usage instructions
+- ✅ **Monitoring**: Health checks and performance metrics endpoints
+- ✅ **Scalability**: Designed for production deployment with Docker support
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.11+
+- pip package manager
+- 4GB+ RAM
+
+### Installation & Running
+```bash
+# Clone the repository
+git clone https://github.com/Mahmoudsabry3/customer_churn.git
+cd customer_churn
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Start the API server
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+# Access the application
+# Web Interface: http://localhost:8000
+# API Docs: http://localhost:8000/docs
+```
+
+### Quick Test
+```python
+import requests
+
+# Test prediction
+response = requests.post("http://localhost:8000/api/churn/predict", json={
+    "total_sessions": 10,
+    "avg_session_duration": 3600.0,
+    "total_songs_played": 100,
+    "avg_songs_per_session": 10.0,
+    "thumbs_up_count": 20,
+    "thumbs_down_count": 5,
+    "add_playlist_count": 15,
+    "add_friend_count": 8,
+    "time_since_last_activity": 2,
+    "days_since_registration": 30,
+    "thumbs_up_ratio": 0.2,
+    "thumbs_down_ratio": 0.05,
+    "is_paid_user": 1
+})
+
+print(f"Churn Probability: {response.json()['churn_probability']:.3f}")
+```
+
+## 📊 Project Status & Achievements
+
+### Model Performance Metrics
+| Metric | Value | Status |
+|--------|-------|--------|
+| **ROC AUC** | 91.10% | ✅ Excellent |
+| **Accuracy** | 88.89% | ✅ Good |
+| **Precision** | 80.00% | ✅ Good |
+| **Recall** | 69.23% | ✅ Good |
+| **F1-Score** | 74.23% | ✅ Good |
+
+### Technical Achievements
+- 🎯 **High Performance**: 91.10% ROC AUC with XGBoost classifier
+- ⚡ **Fast API**: Sub-second response times with FastAPI
+- 🔄 **MLflow Integration**: Complete experiment tracking
+- 🛡️ **Production Ready**: CORS, health checks, error handling
+- 📈 **Scalable**: Designed for high-traffic production environments
+- 📚 **Well Documented**: Comprehensive API documentation
+
+### Repository Status
+- ✅ **Clean Code**: Properly organized and documented
+- ✅ **Version Control**: Git history cleaned and optimized
+- ✅ **GitHub Ready**: Pushed to https://github.com/Mahmoudsabry3/customer_churn
+- ✅ **Latest Version**: All improvements included in current commit
+
 ## Table of Contents
 
 - [Overview](#overview)
@@ -34,9 +126,6 @@ This project implements a production-ready customer churn prediction system desi
 - **Production-Ready**: CORS support, health checks, comprehensive error handling
 - **Interactive Web Interface**: User-friendly frontend for testing and monitoring
 
-### Live Demo
-
-🚀 **API Endpoint**: https://8000-iflo2lrj86sj5imjtyyox-5a08909e.manusvm.computer
 
 ## Problem Statement
 
@@ -1134,12 +1223,4 @@ Please use GitHub issues for bug reports and feature requests. Include:
 - Steps to reproduce (for bugs)
 - Expected vs. actual behavior
 - Environment details (Python version, OS, etc.)
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
----
-
-*This project demonstrates a comprehensive approach to machine learning operations (MLOps) for churn prediction, combining modern software engineering practices with robust machine learning methodologies. The implementation serves as both a functional churn prediction system and a template for production ML deployments.*
 
