@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/cacd065a200544548508d92ddf499cad/artifacts
+end_time: 1754173824876
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: cacd065a200544548508d92ddf499cad
+run_name: bittersweet-deer-408
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173824867
+status: 3
+tags: []
+user_id: ubuntu

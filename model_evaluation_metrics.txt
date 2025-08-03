@@ -1,0 +1,31 @@
+--- Aggregated Model Evaluation Results ---
+Accuracy: 0.8889
+Precision: 0.8000
+Recall: 0.6923
+F1-Score: 0.7423
+ROC AUC: 0.9116
+Precision-Recall AUC: 0.7620
+
+--- Confusion Matrix ---
+[[164   9]
+ [ 16  36]]
+  True Negative (TN): 164
+  False Positive (FP): 9
+  False Negative (FN): 16
+  True Positive (TP): 36
+
+--- Classification Report ---
+              precision    recall  f1-score   support
+
+    No Churn       0.91      0.95      0.93       173
+       Churn       0.80      0.69      0.74        52
+
+    accuracy                           0.89       225
+   macro avg       0.86      0.82      0.84       225
+weighted avg       0.89      0.89      0.89       225
+
+--- Business Implications of Model Errors ---
+False Positives (Predicted Churn, Actual No Churn): 9
+  - Business Impact: Potential wasted resources on retention efforts for users who would not have churned.
+False Negatives (Predicted No Churn, Actual Churn): 16
+  - Business Impact: Lost revenue and missed opportunities to retain valuable customers.

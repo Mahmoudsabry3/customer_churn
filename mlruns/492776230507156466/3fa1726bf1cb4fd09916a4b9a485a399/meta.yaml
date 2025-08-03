@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/3fa1726bf1cb4fd09916a4b9a485a399/artifacts
+end_time: 1754173763497
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: 3fa1726bf1cb4fd09916a4b9a485a399
+run_name: auspicious-snake-834
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173763486
+status: 3
+tags: []
+user_id: ubuntu

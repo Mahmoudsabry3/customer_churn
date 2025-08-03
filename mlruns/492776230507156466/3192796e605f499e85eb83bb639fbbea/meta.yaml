@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/3192796e605f499e85eb83bb639fbbea/artifacts
+end_time: 1754173817510
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: 3192796e605f499e85eb83bb639fbbea
+run_name: spiffy-steed-213
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173817500
+status: 3
+tags: []
+user_id: ubuntu

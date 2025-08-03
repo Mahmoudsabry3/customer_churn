@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/277d917f7dec46bd89ae960c78b1ef83/artifacts
+end_time: 1754248426226
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: 277d917f7dec46bd89ae960c78b1ef83
+run_name: stylish-newt-315
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754248426210
+status: 3
+tags: []
+user_id: mahmoudsabry

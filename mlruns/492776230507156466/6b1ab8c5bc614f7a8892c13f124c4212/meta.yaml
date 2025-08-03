@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/6b1ab8c5bc614f7a8892c13f124c4212/artifacts
+end_time: 1754173809918
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: 6b1ab8c5bc614f7a8892c13f124c4212
+run_name: bold-penguin-928
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173809908
+status: 3
+tags: []
+user_id: ubuntu

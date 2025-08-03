@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/0721d81a44fd4c298d4f7bbfd36cf1d0/artifacts
+end_time: 1754173817084
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: 0721d81a44fd4c298d4f7bbfd36cf1d0
+run_name: gregarious-squid-387
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173817073
+status: 3
+tags: []
+user_id: ubuntu

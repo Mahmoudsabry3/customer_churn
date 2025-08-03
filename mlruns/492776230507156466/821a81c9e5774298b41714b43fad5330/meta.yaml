@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/821a81c9e5774298b41714b43fad5330/artifacts
+end_time: 1754173797020
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: 821a81c9e5774298b41714b43fad5330
+run_name: mysterious-loon-428
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173797007
+status: 3
+tags: []
+user_id: ubuntu

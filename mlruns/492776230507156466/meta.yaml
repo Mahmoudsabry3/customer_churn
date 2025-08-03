@@ -1,0 +1,6 @@
+artifact_location: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466
+creation_time: 1754172809054
+experiment_id: '492776230507156466'
+last_update_time: 1754172809054
+lifecycle_stage: active
+name: churn_prediction

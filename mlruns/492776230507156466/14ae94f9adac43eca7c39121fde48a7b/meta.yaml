@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/14ae94f9adac43eca7c39121fde48a7b/artifacts
+end_time: 1754173779543
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: 14ae94f9adac43eca7c39121fde48a7b
+run_name: rambunctious-mink-44
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173779534
+status: 3
+tags: []
+user_id: ubuntu

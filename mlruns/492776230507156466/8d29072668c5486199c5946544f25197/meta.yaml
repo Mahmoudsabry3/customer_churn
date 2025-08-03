@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/8d29072668c5486199c5946544f25197/artifacts
+end_time: 1754173792284
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: 8d29072668c5486199c5946544f25197
+run_name: dazzling-bear-967
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173792274
+status: 3
+tags: []
+user_id: ubuntu

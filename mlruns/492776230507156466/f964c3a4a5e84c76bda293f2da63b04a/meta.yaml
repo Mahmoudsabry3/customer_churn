@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/f964c3a4a5e84c76bda293f2da63b04a/artifacts
+end_time: 1754173800700
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: f964c3a4a5e84c76bda293f2da63b04a
+run_name: adventurous-goat-234
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173800691
+status: 3
+tags: []
+user_id: ubuntu

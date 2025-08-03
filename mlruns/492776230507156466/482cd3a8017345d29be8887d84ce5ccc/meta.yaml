@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/482cd3a8017345d29be8887d84ce5ccc/artifacts
+end_time: 1754173815821
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: 482cd3a8017345d29be8887d84ce5ccc
+run_name: kindly-worm-730
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173815811
+status: 3
+tags: []
+user_id: ubuntu

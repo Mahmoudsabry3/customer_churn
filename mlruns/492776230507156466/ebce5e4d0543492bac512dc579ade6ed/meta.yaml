@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/ebce5e4d0543492bac512dc579ade6ed/artifacts
+end_time: 1754173817296
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: ebce5e4d0543492bac512dc579ade6ed
+run_name: intelligent-flea-869
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173817286
+status: 3
+tags: []
+user_id: ubuntu

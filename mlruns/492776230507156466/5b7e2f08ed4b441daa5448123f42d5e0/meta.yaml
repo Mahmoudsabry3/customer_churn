@@ -1,0 +1,14 @@
+artifact_uri: file:///home/ubuntu/churn_prediction_fastapi/mlruns/492776230507156466/5b7e2f08ed4b441daa5448123f42d5e0/artifacts
+end_time: 1754173821284
+entry_point_name: ''
+experiment_id: '492776230507156466'
+lifecycle_stage: active
+run_id: 5b7e2f08ed4b441daa5448123f42d5e0
+run_name: fun-sloth-269
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754173821274
+status: 3
+tags: []
+user_id: ubuntu
