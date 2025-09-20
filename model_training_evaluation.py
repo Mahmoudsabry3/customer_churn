@@ -7,8 +7,15 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 import joblib
 import numpy as np
+import mlflow
+import mlflow.sklearn
+from datetime import datetime
 
 def train_and_evaluate_model(file_path):
+    # Initialize MLflow
+    mlflow.set_tracking_uri("file:./mlruns")
+    mlflow.set_experiment("churn_prediction")
+    
     df = pd.read_csv(file_path)
 
     # Define features (X) and target (y)
@@ -111,6 +118,41 @@ def train_and_evaluate_model(file_path):
     # In a real-world scenario, you might retrain on the full dataset or use an ensemble of models.
     final_model_pipeline = base_model_pipeline # This will be the model trained on the last fold
     final_model_pipeline.fit(X, y) # Retrain on full dataset for deployment
+    
+    # Start MLflow run to log everything
+    with mlflow.start_run(run_name=f"churn_model_training_{datetime.now().strftime('%Y%m%d_%H%M%S')}"):
+        # Log model parameters
+        mlflow.log_params({
+            "model_type": "XGBClassifier",
+            "n_splits": 5,
+            "random_state": 42,
+            "objective": "binary:logistic",
+            "eval_metric": "auc"
+        })
+        
+        # Log evaluation metrics
+        mlflow.log_metrics({
+            "accuracy": accuracy,
+            "precision": precision,
+            "recall": recall,
+            "f1_score": f1,
+            "roc_auc": roc_auc,
+            "precision_recall_auc": pr_auc
+        })
+        
+        # Log confusion matrix components
+        mlflow.log_metrics({
+            "true_negative": cm[0, 0],
+            "false_positive": cm[0, 1],
+            "false_negative": cm[1, 0],
+            "true_positive": cm[1, 1]
+        })
+        
+        # Note: Artifact logging removed due to path issues
+        
+        print(f"\nMLflow run logged successfully!")
+        print(f"Run ID: {mlflow.active_run().info.run_id}")
+    
     joblib.dump(final_model_pipeline, "churn_prediction_model.pkl")
     print("\nTrained model saved to churn_prediction_model.pkl")
 
