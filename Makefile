@@ -1,40 +1,96 @@
-.PHONY: install run test clean lint format help
+.PHONY: install run test clean lint format help train all docker-build docker-run setup-data train-model full-pipeline
 
+# =====================
 # Default target
+# =====================
 help:
 	@echo "Available commands:"
-	@echo "  install    - Install dependencies"
-	@echo "  run        - Run the FastAPI server"
-	@echo "  test       - Run tests (placeholder)"
-	@echo "  clean      - Clean up temporary files"
-	@echo "  lint       - Run linting (placeholder)"
-	@echo "  format     - Format code (placeholder)"
-	@echo "  help       - Show this help message"
+	@echo "  setup-data     - Run data processing pipeline"
+	@echo "  train-model    - Train the churn prediction model"
+	@echo "  full-pipeline  - Run complete pipeline (data + training)"
+	@echo "  install        - Install dependencies"
+	@echo "  run            - Run the FastAPI server"
+	@echo "  test           - Run tests with pytest"
+	@echo "  clean          - Clean up temporary files"
+	@echo "  lint           - Run linting with flake8"
+	@echo "  format         - Format code with black"
+	@echo "  all            - Clean, install, lint, test, run"
+	@echo "  docker-build   - Build Docker image"
+	@echo "  docker-run     - Run Docker container"
 
+# =====================
+# Data & Model Pipeline
+# =====================
+setup-data:
+	@echo "Running data processing pipeline..."
+	python scripts/data_pipeline.py
+
+train-model:
+	@echo "Training churn prediction model..."
+	python scripts/train_model.py
+
+full-pipeline:
+	@echo "Running complete pipeline (data processing + model training)..."
+	python scripts/full_pipeline.py
+
+# =====================
+# Setup & Run
+# =====================
 install:
 	@echo "Installing dependencies..."
 	pip install -r requirements.txt
 
 run:
 	@echo "Starting FastAPI server..."
-	uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+	python main.py
 
+# =====================
+# Quality & Testing
+# =====================
 test:
 	@echo "Running tests..."
-	@echo "Tests not implemented yet"
+	pytest tests/
 
+lint:
+	@echo "Running linting..."
+	flake8 src/ scripts/ main.py
+
+format:
+	@echo "Formatting code..."
+	black src/ scripts/ main.py
+
+# =====================
+# Utilities
+# =====================
 clean:
 	@echo "Cleaning up..."
 	find . -type f -name "*.pyc" -delete
 	find . -type d -name "__pycache__" -delete
 	rm -rf .pytest_cache
 	rm -rf mlruns
+	rm -rf logs/*.log
 
-lint:
-	@echo "Running linting..."
-	@echo "Linting not configured yet"
+all: clean install lint test run
 
-format:
-	@echo "Formatting code..."
-	@echo "Code formatting not configured yet"
+# =====================
+# Docker (optional)
+# =====================
+docker-build:
+	@echo "Building Docker image..."
+	docker build -t churn-app .
 
+docker-run:
+	@echo "Running Docker container..."
+	docker run -p 8000:8000 churn-app
+
+# =====================
+# Development
+# =====================
+dev-setup: install
+	@echo "Setting up development environment..."
+	mkdir -p data/{raw,processed,features}
+	mkdir -p models artifacts logs
+	@echo "Development environment ready!"
+
+# Quick start for new development
+quick-start: dev-setup full-pipeline run
