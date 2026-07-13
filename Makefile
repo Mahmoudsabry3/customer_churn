@@ -49,15 +49,15 @@ run:
 # =====================
 test:
 	@echo "Running tests..."
-	pytest tests/
+	python -m pytest tests/
 
 lint:
 	@echo "Running linting..."
-	flake8 src/ scripts/ main.py
+	python -m flake8 src/ scripts/ tests/ main.py
 
 format:
 	@echo "Formatting code..."
-	black src/ scripts/ main.py
+	python -m black src/ scripts/ tests/ main.py
 
 # =====================
 # Utilities
@@ -81,13 +81,14 @@ docker-build:
 
 docker-run:
 	@echo "Running Docker container..."
-	docker run -p 8000:8000 churn-app
+	docker run -p 8000:8000 -v "$(PWD)/models:/app/models:ro" churn-app
 
 # =====================
 # Development
 # =====================
-dev-setup: install
+dev-setup:
 	@echo "Setting up development environment..."
+	python -m pip install -r requirements-dev.txt
 	mkdir -p data/{raw,processed,features}
 	mkdir -p models artifacts logs
 	@echo "Development environment ready!"
